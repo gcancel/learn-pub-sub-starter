@@ -22,7 +22,7 @@ func (gs *GameState) CommandSpawn(words []string) error {
 		return fmt.Errorf("error: %s is not a valid unit", rank)
 	}
 
-	id := len(gs.getUnitsSnap()) + 1
+	id := len(gs.GetUnitsSnap()) + 1
 	gs.addUnit(Unit{
 		ID:       id,
 		Rank:     UnitRank(rank),
